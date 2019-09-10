@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Classes.MountainBikeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-10T06:08:34" hostname="sayyid-K46CB" time="0.025">
+  <properties/>
+  <testcase name="testSetHeight" classname="Classes.MountainBikeTest" time="0.025"/>
+  <system-out><![CDATA[setHeight
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

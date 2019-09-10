@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EnumType.EnumTestTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-09-10T06:33:47" hostname="sayyid-K46CB" time="0.041">
+  <properties/>
+  <testcase name="testMain" classname="EnumType.EnumTestTest" time="0.036"/>
+  <testcase name="testTellItLikeItIs" classname="EnumType.EnumTestTest" time="0.001"/>
+  <system-out><![CDATA[main
+Mondays are bad.
+Midweek days are so-so.
+Fridays are better.
+Weekends are best.
+Weekends are best.
+tellItLikeItIs
+Mondays are bad.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
