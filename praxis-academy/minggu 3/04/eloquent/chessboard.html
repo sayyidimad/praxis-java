@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chessboard</title>
+</head>
+
+<body>
+    <script>
+        let papan = "", size = 8, genap;
+        for (let baris = 0; baris < size; baris++) {
+            if (baris % 2 === 0) {
+                genap = true;
+            } else {
+                genap = false;
+            }
+
+            for (let kolom = 0; kolom < size; kolom++) {
+                if (genap) {
+                    papan += " ";
+                } else {
+                    papan += "#";
+                }
+
+                genap = !genap;
+            }
+            papan += "\n";
+        }
+        console.log(papan);
+    </script>
+</body>
+
+</html>
