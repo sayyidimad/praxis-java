@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The sum of a range</title>
+</head>
+
+<body>
+    <script>
+        function range(num1, num2, step) {
+            let array = [];
+            if (step == null) {
+                step = 1;
+            }
+
+            if (num1 < num2) {
+                for (; num1 <= num2; num1 += step) {
+                    array.push(num1);
+                }
+                return array;
+            } else {
+                for (; num1 >= num2; num1 += step) {
+                    array.push(num1);
+                }
+                return array;
+            }
+        }
+
+        function sum(range) {
+            let total = 0;
+            for (let index = 0; index < range.length; index++) {
+                total += range[index];
+            }
+            return total;
+        }
+
+        console.log(range(1, 10));
+        console.log(range(5, 2, -1));
+        console.log(sum(range(1, 10)));
+    </script>
+</body>
+
+</html>
