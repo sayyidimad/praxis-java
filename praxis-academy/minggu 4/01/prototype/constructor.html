@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructor Function</title>
+</head>
+
+<body>
+    <script>
+        function Animal(name) {
+            this.name = name;
+
+            // add a method on object
+            // this.getName = function () {
+            // here 'this' is also the object as function belongs to the object
+            //     return 'Animal name is => ' + this.name;
+            // }
+        }
+
+        // add 'getName' function to the prototype
+        // Animal.prototype.getName = function () {
+        //     return 'Animal name is => ' + this.name;
+        // }
+
+        // add simple property on prototype
+        Animal.prototype.generation = '100';
+
+        var a = new Animal("Dog");
+
+        // log generation
+        console.log('a.generation ==> ', a.generation);
+        console.log('has own generation ==> ', a.hasOwnProperty('generation'));
+
+        // console.log('Animal.prototype ==> ', Animal.prototype); // log prototype
+        // console.log('a.__proto__ ==> ', a.__proto__); // log prototype
+        // console.log('Animal.prototype === a.__proto__ : ', Animal.prototype === a.__proto__); // check
+        // console.log('a ==> ', a); // log object a
+        // console.log('a.getName() ==> ', a.getName());
+        // console.log('a.generation ==> ', a.generation);
+
+        // console.log(Animal.prototype);
+        // var a = new Animal('Dog');
+        // console.log('a object ==> ', a);
+        // console.log('a.getName() ==> ', a.getName());
+        // console.log('a.constructor === Animal', a.constructor === Animal);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function Chaining</title>
+</head>
+<body>
+    <script>
+        let meetups = [
+            {name: 'JavaScript', isActive: true, members: 700},
+            {name: 'Angular', isActive: true, members: 900},
+            {name: 'Node', isActive: false, members: 600},
+            {name: 'React', isActive: true, members: 500}
+        ];
+
+        let sumFPChain = meetups.filter((m) => {
+            return m.isActive;
+        })
+        .map((m) => {
+            return m.members- (0.1 * m.members);
+        })
+        .reduce((acc, m) => {
+            return acc + m;
+        }, 0);
+        console.log(sumFPChain); // Output will be 1890
+    </script>
+</body>
+</html>
