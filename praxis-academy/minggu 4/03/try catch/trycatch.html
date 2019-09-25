@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Try catch</title>
+</head>
+<body>
+    <script>
+        // ===> The "try...catch" syntax contoh pertama <===
+        // try {
+        //     alert('Start of try runs');
+        //     // ...no errors here
+        //     alert('End of try runs');
+        // } catch (err) {
+        //     alert('Catch is ignored, because there are no errors');
+        // }
+
+        // ===> The "try...catch" syntax contoh kedua <===
+        // try {
+        //     alert('Start of try runs');
+        //     lalala; // error, variable is not defined!
+        //     alert('End of try (never reached)');
+        // } catch (err) {
+        //     alert('Error has occured!');
+        // }
+
+        // ===> The "try...catch" syntax, only works for runtime errors <===
+        // try {
+        //     {{{{{{{{{{{{
+        // } catch (e) {
+        //     alert("The engine can't understand this code, it's invalid");
+        // }
+
+        // ===> The "try...catch" syntax, works synchronously, contoh pertama <===
+        // try {
+        //     setTimeout(() => {
+        //         noSuchVariable; // script will die here
+        //     }, 1000);
+        // } catch (e) {
+        //     alert("won't work");
+        // }
+
+        // ===> The "try...catch" syntax, works synchronously, contoh kedua <===
+        setTimeout(() => {
+            try {
+                noSuchVariable; // try..catch handles the error!
+            } catch {
+                alert("error is caught here!");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
